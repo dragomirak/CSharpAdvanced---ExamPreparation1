@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OffroadChallenge", "OffroadChallenge\OffroadChallenge.csproj", "{06715790-A988-404C-9837-DB4B4C5D3DB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OffroadChallenge", "OffroadChallenge\OffroadChallenge.csproj", "{06715790-A988-404C-9837-DB4B4C5D3DB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishingCompetition", "FishingCompetition\FishingCompetition.csproj", "{1C674D90-1443-4C6C-B334-4CF67B4BFCA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishingCompetition", "FishingCompetition\FishingCompetition.csproj", "{1C674D90-1443-4C6C-B334-4CF67B4BFCA8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailClient", "MailClient\MailClient.csproj", "{B66954DE-505E-47D4-AE53-9E03CACFB225}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1C674D90-1443-4C6C-B334-4CF67B4BFCA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C674D90-1443-4C6C-B334-4CF67B4BFCA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C674D90-1443-4C6C-B334-4CF67B4BFCA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B66954DE-505E-47D4-AE53-9E03CACFB225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66954DE-505E-47D4-AE53-9E03CACFB225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66954DE-505E-47D4-AE53-9E03CACFB225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66954DE-505E-47D4-AE53-9E03CACFB225}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
