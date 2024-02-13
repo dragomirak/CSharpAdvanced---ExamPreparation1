@@ -1,4 +1,6 @@
-﻿namespace OffroadChallenge;
+﻿using System.Text;
+
+namespace OffroadChallenge;
 
 public class Program
 {
@@ -24,16 +26,18 @@ public class Program
         {
             int result = initialFuel.Pop() - addConsumption.Dequeue();
             altitudeCount++;
-            if (result >= neededFuel.Dequeue())
+            int fuelToHave = neededFuel.Dequeue();
+            if (result >= fuelToHave)
             {
                 Console.WriteLine($"John has reached: Altitude {altitudeCount}");
                 reachedAltitudes.Enqueue(altitudeCount);
             }
-            else if (result < neededFuel.Dequeue())
+            else if (result < fuelToHave)
             {
                 Console.WriteLine($"John did not reach: Altitude {altitudeCount}");
                 break;
             }
+
         }
 
         if (reachedAltitudes.Count == 0)
@@ -41,20 +45,23 @@ public class Program
             Console.WriteLine("John failed to reach the top.");
             Console.WriteLine("John didn't reach any altitude.");
         }
-        else if (reachedAltitudes.Count > 0 &&
-            reachedAltitudes.Count < initialStackCount)
-        {
-            Console.WriteLine("John failed to reach the top.");
-            Console.Write("Reached altitudes: ");
-            for (int i = 0; i < reachedAltitudes.Count - 1; i++)
-            {
-                Console.Write($"Altitude {reachedAltitudes.Dequeue()}, ");
-            }
-            Console.Write($"Altitude {reachedAltitudes.Dequeue()}");
-        }
         else if (reachedAltitudes.Count == initialStackCount)
         {
             Console.WriteLine("John has reached all the altitudes and managed to reach the top!");
         }
+        else if (reachedAltitudes.Count > 0 &&
+            reachedAltitudes.Count < initialStackCount)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("John failed to reach the top.");
+            sb.Append("Reached altitudes: ");
+            while (reachedAltitudes.Count > 1)
+            {
+                sb.Append($"Altitude {reachedAltitudes.Dequeue()}, ");
+            }
+            sb.Append($"Altitude {reachedAltitudes.Dequeue()}");
+            Console.WriteLine(sb.ToString().Trim());
+        }
+
     }
 }
